@@ -332,7 +332,7 @@ h2::after {
 #skills .skill-name {
   font-weight: bold;
   font-size: 0.9rem;
-  color: #32363a;
+  color: #0070f2;
 }
 
 #skills .skill-bar {
@@ -352,15 +352,16 @@ h2::after {
 
 #skills .skill-label {
   font-size: 0.8rem;
-  color: #666;
+  color: #16a085;
 }
 
+
 .portfolio.dark #skills .skill-name {
-  color: #ffffff;
+  color: #0a6ed1;
 }
 
 .portfolio.dark #skills .skill-label {
-  color: #cccccc;
+  color: #16a085;
 }
 
 @media (min-width: 768px) {
@@ -369,6 +370,10 @@ h2::after {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
+}
+
+#experience {
+  border-color: #16a085; /* Green accent to match site */
 }
 
 #experience ul {
@@ -383,6 +388,16 @@ h2::after {
   gap: 2rem;
   max-width: 800px;
   margin: 0 auto;
+}
+
+.experience-item::before {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(90deg, #0070f2, #16a085);
+  margin: -1rem -1rem 0 -1rem;
 }
 
 .experience-item {
@@ -429,20 +444,94 @@ h2::after {
   color: #0a6ed1;
 }
 
-#about {
-  border-color: #16a085; /* Success green */
+#contact {
+  border-color: #16a085; /* Green accent to match site */
 }
 
-#skills {
-  border-color: #ff9a02; /* Warning orange */
+#contact button {
+  padding: 0.75rem;
+  background: linear-gradient(90deg, #0070f2, #16a085);
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: filter 0.2s ease;
 }
 
-#experience {
-  border-color: #0070f2; /* Primary blue */
+#contact button:hover {
+  filter: brightness(1.05);
 }
 
-#projects {
-  border-color: #e10d3a; /* Error red */
+#projects .project-group h3 {
+  color: #0070f2;
+  margin: 0 0 1rem 0;
+  text-align: left;
+}
+
+#projects .projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  #projects .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+#projects .project-card {
+  background-color: #ffffff;
+  border: 1px solid #0070f2;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: left;
+}
+
+.portfolio.dark #projects .project-card {
+  background-color: #2a2a2a;
+  border-color: #0a6ed1;
+}
+
+#projects .project-title {
+  margin: 0 0 0.5rem 0;
+  color: #0070f2;
+}
+
+.portfolio.dark #projects .project-title {
+  color: #0a6ed1;
+}
+
+#projects .project-context,
+#projects .project-tech,
+#projects .project-tasks ul li {
+  color: #32363a;
+}
+
+.portfolio.dark #projects .project-context,
+.portfolio.dark #projects .project-tech,
+.portfolio.dark #projects .project-tasks ul li {
+  color: #ffffff;
+}
+
+#projects .project-context,
+#projects .project-tech,
+#projects .project-tasks ul {
+  text-align: justify;
+  margin: 0.25rem 0;
+}
+
+/* Gradient accent bar for cards */
+#projects .project-card::before {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(90deg, #0070f2, #16a085);
+  margin: -1rem -1rem 0 -1rem;
 }
 
 #contact {
