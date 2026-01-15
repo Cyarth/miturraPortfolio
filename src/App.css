@@ -1,0 +1,562 @@
+body {
+  background-color: #f7f7f7; /* SAP Horizon background */
+  margin: 0;
+  padding: 0;
+  display: block;
+  place-items: unset;
+}
+
+.portfolio {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #32363a; /* SAP Horizon text color */
+  background-color: #f7f7f7; /* SAP Horizon background */
+  min-height: 100vh;
+  text-align: justify;
+  padding: 80px 0 0 0; /* Padding for fixed nav */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio.dark {
+  background-color: #1a1a1a; /* Dark background */
+  color: #ffffff; /* Light text */
+}
+
+.portfolio.dark section {
+  background-color: #2a2a2a; /* Dark section background */
+  color: #ffffff;
+  border-color: #0a6ed1; /* Darker blue border */
+}
+
+.portfolio.dark #hero {
+  background: linear-gradient(135deg, #005aa3, #003d73); /* Darker blues */
+}
+
+.portfolio.dark h2,
+.portfolio.dark h3 {
+  color: #0a6ed1; /* Lighter blue for headings */
+}
+
+.portfolio.dark li {
+  border-color: #0a6ed1;
+  color: #ffffff;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 1rem;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.portfolio.dark nav {
+  background-color: #2a2a2a;
+}
+
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #0070f2;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+nav.hidden {
+  top: -80px;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #0070f2;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-top:hover {
+  background-color: #005aa3;
+}
+
+.portfolio.dark .scroll-top {
+  background-color: #0a6ed1;
+}
+
+footer {
+  background-color: #f7f7f7;
+  color: #32363a;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-top: 2px solid #0070f2;
+}
+
+.portfolio.dark footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-top-color: #0a6ed1;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+nav li {
+  display: inline;
+  border: none;
+}
+
+nav a {
+  color: #0070f2;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #e0e0e0;
+}
+
+.portfolio.dark nav a {
+  color: #0a6ed1;
+}
+
+.portfolio.dark nav a:hover {
+  background-color: #3a3a3a;
+}
+
+nav button {
+  background: none;
+  color: #0070f2;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+nav button:hover {
+  background-color: #e0e0e0;
+}
+
+.portfolio.dark nav button {
+  color: #0a6ed1;
+}
+
+.portfolio.dark nav button:hover {
+  background-color: #3a3a3a;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1000px; /* Increased width */
+  text-align: center;
+  background-color: #ffffff; /* White surface */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #0070f2; /* SAP Horizon blue border */
+  width: 100%;
+  box-sizing: border-box;
+  animation: fadeInUp 0.8s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+#hero {
+  background: linear-gradient(135deg, #0070f2, #0a6ed1, #16a085); /* Add green accent */
+  color: #ffffff;
+  padding: 2rem;
+  border: none; /* No border for hero */
+  box-shadow: none;
+  animation: fadeInUp 1s ease-out;
+}
+
+#hero:hover {
+  transform: none; /* No hover for hero */
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+#hero p {
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0070f2; /* SAP primary blue */
+  position: relative;
+  text-align: center;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #0070f2, #16a085);
+  margin: 0.5rem auto;
+  border-radius: 2px;
+}
+
+#skills .skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#skills .skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+}
+
+#skills .skill-name {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #32363a;
+}
+
+#skills .skill-bar {
+  width: 100%;
+  height: 6px;
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+#skills .skill-level {
+  height: 100%;
+  background: linear-gradient(90deg, #0070f2, #16a085);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+#skills .skill-label {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.portfolio.dark #skills .skill-name {
+  color: #ffffff;
+}
+
+.portfolio.dark #skills .skill-label {
+  color: #cccccc;
+}
+
+@media (min-width: 768px) {
+  #skills .skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+#experience ul {
+  list-style: disc;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.experience-item {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  text-align: left;
+}
+
+.portfolio.dark .experience-item {
+  background-color: #2a2a2a;
+}
+
+.experience-item h3 {
+  margin: 0 0 0.5rem 0;
+  color: #0070f2;
+}
+
+.portfolio.dark .experience-item h3 {
+  color: #0a6ed1;
+}
+
+.experience-company {
+  margin: 0 0 1rem 0;
+  font-weight: bold;
+  color: #666;
+}
+
+.portfolio.dark .experience-company {
+  color: #aaaaaa;
+}
+
+.experience-section {
+  margin-bottom: 1rem;
+}
+
+.experience-section h4 {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #0070f2;
+}
+
+.portfolio.dark .experience-section h4 {
+  color: #0a6ed1;
+}
+
+#about {
+  border-color: #16a085; /* Success green */
+}
+
+#skills {
+  border-color: #ff9a02; /* Warning orange */
+}
+
+#experience {
+  border-color: #0070f2; /* Primary blue */
+}
+
+#projects {
+  border-color: #e10d3a; /* Error red */
+}
+
+#contact {
+  border-color: #0a6ed1; /* Info blue */
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#contact div {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #0070f2;
+}
+
+#contact input,
+#contact textarea {
+  padding: 0.5rem;
+  border: 2px solid #0070f2;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #32363a;
+}
+
+#contact textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+#contact button {
+  padding: 0.75rem;
+  background-color: #0070f2;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+#contact button:hover {
+  background-color: #005aa3;
+}
+
+#contact div:last-child {
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#contact a {
+  color: #0070f2;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 2px solid #0070f2;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+#contact a:hover {
+  background-color: #e0e0e0;
+}
+
+.portfolio.dark #contact input,
+.portfolio.dark #contact textarea {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-color: #0a6ed1;
+}
+
+.portfolio.dark #contact a {
+  color: #0a6ed1;
+  border-color: #0a6ed1;
+}
+
+.portfolio.dark #contact a:hover {
+  background-color: #3a3a3a;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+  }
+
+  .portfolio.dark nav ul {
+    background-color: #2a2a2a;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  nav {
+    padding: 0.5rem;
+  }
+
+  section {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  #hero {
+    padding: 2rem 1rem;
+  }
+
+  #hero h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #experience li {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+  }
+
+  #experience h3 {
+    font-size: 1.2rem;
+  }
+
+  #experience p {
+    font-size: 0.9rem;
+  }
+}
