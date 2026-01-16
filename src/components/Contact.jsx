@@ -36,6 +36,10 @@ const Contact = () => {
           <img src="https://github.githubassets.com/images/modules/site/icons/footer/github-mark.svg" alt="GitHub" style={{width: '20px', height: '20px', marginRight: '0.5rem'}} />
           GitHub
         </a>
+        <a href="/cv.pdf" download="CV_Mairon_Iturra.pdf">
+          <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="Descargar CV" style={{width: '20px', height: '20px', marginRight: '0.5rem'}} />
+          Descargar CV
+        </a>
       </div>
     </section>
   );
